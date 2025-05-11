@@ -1,0 +1,310 @@
+/* تعيين النمط العام */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff5e6; /* خلفية فاتحة برتقالية */
+    margin: 0;
+    padding: 0;
+}
+
+/* حاوية رئيسية */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* الشريط الجانبي */
+.sidebar {
+    width: 250px;
+    background-color: #ff8c42; /* لون برتقالي */
+    color: #fff;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ff6f00; /* لون برتقالي غامق */
+}
+
+/* المحتوى الرئيسي */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* العنوان العلوي */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eadfd9; /* لون خلفية الهيدر */
+    padding: 10px 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #ff8c42;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* شريط الفلترة */
+.search-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.search-filter button {
+    font-size: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff8c42; /* برتقالي */
+    color: #fff;
+    transition: all 0.3s ease;
+    width: 200px;
+}
+
+.search-filter button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff6f00;
+}
+
+.search-filter button.active {
+    box-shadow: 0 0 15px #ff6f00;
+}
+.sidebar ul li a.active,
+  .sidebar ul li a:hover {
+    background-color: #ff6f00;
+  }
+
+/* الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 12px;
+}
+
+table th {
+    background-color: #ff8c42; /* برتقالي */
+    color: #fff;
+    font-size: 16px;
+}
+
+table td {
+    background-color: #fff;
+    font-size: 16px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* الأزرار في الجدول */
+button {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    margin: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* زر القبول - أخضر */
+#g {
+    background-color: #28a745;
+    color: white;
+}
+
+#g:hover {
+    background-color: #2f4b35;
+}
+
+/* زر الرفض - أحمر */
+#r{
+    background-color: #dc3545;
+    color: white;
+}
+
+#r:hover {
+    background-color: #89323b;
+}
+
+
+/* الفعالية في الأزرار */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px #ff6f00;
+}
+
+/* تغيير النص عند المرور على الزر */
+button:active {
+    transform: scale(0.95);
+}
+
+/* توسيط النص في الأزرار */
+.search-filter button,
+#r,
+#g,
+button.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* تنسيق الجدول عند وجود البيانات */
+table td, table th {
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+/* تحسين تنسيق الأعمدة بشكل مرن */
+table td a {
+    color: #ff8c42;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+/* حالة فارغة - لا توجد بيانات */
+table tr.no-data td {
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #888;
+    font-size: 18px;
+}
+/* تنسيق الهيدر */
+
+/* تنسيق زر تسجيل الخروج */
+.logout {
+    background-color: #de4a14d1; /* اللون الأحمر */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.logout i {
+    margin-left: 5px; /* مسافة بين الأيقونة والنص */
+}
+
+.logout:hover {
+    background-color: #ce5f16; /* تغيير اللون عند التمرير */
+}
+
+.logout:focus {
+    outline: none; /* إزالة التأثير عند التركيز */
+}
+
+/* تنسيق الحاوية التي تحتوي على الحقل والزر */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* تنسيق الـ label */
+.input-container label {
+    font-size: 14px;
+    color: #333;
+    margin-right: 10px; /* إضافة مسافة بين الـ label والحقل */
+    display: block;
+    margin-bottom: 5px; /* مسافة بين الـ label والحقل */
+}
+
+/* تنسيق الحقل */
+.input-container input {
+    width: 100%;
+    padding-right: 40px; /* إضفاء مساحة على اليمين للزر */
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* تنسيق الزر */
+.input-container button {
+    position: absolute;
+    right: 10px; /* تحديد المسافة من اليمين */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* تغيير اللون عند التمرير على الزر */
+.input-container button:hover {
+    background-color: #45a049;
+}
+/* تنسيق حقل رفع الوثائق */
+input[type="file"] {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* تنسيق الحقل عند رفع ملف بنجاح */
+input[type="file"]:valid {
+    border-color: green;
+}

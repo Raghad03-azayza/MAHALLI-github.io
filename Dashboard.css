@@ -1,0 +1,258 @@
+/* ========== 1. تنسيق عام ========== */
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-color: #fff5e6; */
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    height: 100vh;
+    overflow-y: hidden;
+
+}
+
+/* ========== 2. الحاوية الرئيسية ========== */
+.container {
+    display: flex;
+    height: 100vh;
+    overflow-y: hidden;
+
+}
+
+/* ========== 3. الشريط الجانبي (Sidebar) ========== */
+.sidebar {
+    width: 250px;
+    background-color: #ff8c42;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    margin-bottom: 1rem;
+  }
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  /* .sidebar ul li a.active,
+  .sidebar ul li a:hover {
+    background-color: #ff6f00;
+  }
+   */
+
+/* ========== 4. المحتوى الرئيسي ========== */
+.main-content {
+    flex: 1;
+    padding: 10px;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* overflow-y: visible; */
+
+}
+
+/* ========== 5. الهيدر ========== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(9,65,95,0.1);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .header h1 {
+    color: #09415f;
+    margin: 0;
+  }
+  .logout {
+    background-color: #de4a14;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .logout:hover {
+    background-color: #ce5f16;
+  }
+/* ========== 6. أزرار التبديل/الفلترة ========== */
+.search-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.search-filter button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff8c42;
+    color: #fff;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    cursor: pointer;
+}
+
+.search-filter button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #ff6f00;
+}
+
+.search-filter button.active {
+    background-color: #ff6f00;
+    box-shadow: 0 0 15px #ff6f00;
+}
+.sidebar ul li a.active,
+  .sidebar ul li a:hover {
+    background-color: #ff6f00;
+  }
+/* ========== 7. الجداول ========== */
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: center;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 14px;
+}
+
+table th {
+    background-color: #ff8c42;
+    color: #fff;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+table td a {
+    color: #ff8c42;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table td a:hover {
+    text-decoration: underline;
+}
+
+table tr.no-data td {
+    background-color: #f2f2f2;
+    color: #888;
+    font-size: 18px;
+}
+
+/* ========== 8. الأزرار العامة ========== */
+button {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#g {
+    background-color: #28a745;
+    color: white;
+}
+
+#g:hover {
+    background-color: #2f4b35;
+}
+
+#r {
+    background-color: #dc3545;
+    color: white;
+}
+
+#r:hover {
+    background-color: #89323b;
+}
+
+/* ========== 9. كروت الإحصائيات ========== */
+.cardcontainer {
+    padding: 2rem;
+    width: 100%;
+    margin:0;
+    /* overflow-y: hidden; */
+
+
+
+   
+}
+
+.cardcontainer h1 {
+    color: #ff8c42;
+    font-size: 28px;
+    margin-bottom: 2rem;
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.subGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+
+
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ffccaa;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+

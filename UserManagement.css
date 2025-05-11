@@ -1,0 +1,267 @@
+/* ========== Dashboard.css (مُحدّث لإدارة المشاريع وتعديل المنتجات) ========== */
+
+/* ===== عام ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    background-color: #f5f5f5;
+  }
+  
+  .container, .container2 {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* ===== السايدبار ===== */
+  .sidebar {
+    width: 250px;
+    background-color: #ff8c42;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+  }
+  .sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar ul li {
+    margin-bottom: 1rem;
+  }
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .sidebar ul li a.active,
+  .sidebar ul li a:hover {
+    background-color: #ff6f00;
+  }
+  
+  /* ===== الهيدر ===== */
+  .main-content,
+  .main-content2 {
+    flex: 1;
+    background-color: #fff;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(9,65,95,0.1);
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+  }
+  .header h1 {
+    color: #09415f;
+    margin: 0;
+  }
+  .logout {
+    background-color: #de4a14;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .logout:hover {
+    background-color: #ce5f16;
+  }
+  
+  /* ===== فلتر البحث ===== */
+  .search-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .search-filter input[type="text"],
+  .search-filter select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 150px;
+  }
+  .search-filter button {
+    padding: 8px 16px;
+    background-color: #ff8c42;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .search-filter button:hover {
+    background-color: #ff6f00;
+  }
+  
+  /* ===== عناوين التصنيفات ===== */
+  .category-title {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #09415f;
+    font-size: 18px;
+    border-bottom: 2px solid #ff8c42;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  
+  /* ===== قائمة المشاريع ===== */
+  .project-item {
+    display: flex;
+    /* align-items: center; */
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.2s;
+  }
+  .project-item:hover {
+    background-color: #fafafa;
+  }
+  .arrow-icon {
+    cursor: pointer;
+    font-size: 16px;
+    color: #09415f;
+  }
+  .project-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* ===== قائمة المنتجات داخل المشروع ===== */
+  .product-list {
+    display: none;          /* مخفية مبدئيًا */
+    flex-direction: row; /* ترتيب عمودي للمنتجات */
+    gap: 1rem;
+    margin-top: 0.75rem;
+    margin-right: 1.5rem;
+  }
+  
+  
+  .product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 160px;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .product-card img {
+    max-width: 100%;
+    height: 65%;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .product-card p {
+    margin: 0.5rem 0;
+    font-size: 14px;
+    color: #555;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 0.5rem; */
+  }
+  .actions button,
+  .actions a button {
+    flex: 1;
+    padding: 6px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .actions button:hover {
+    background-color: #9c4747;
+  }
+  
+  /* ===== لا توجد بيانات ===== */
+  .no-data {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* ===== نموذج تعديل المنتج ===== */
+  form{
+    width: 70%;
+    height: 50%;
+  }
+  form label {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 14px;
+    color: #333;
+    font-weight: bolder ;
+
+  }
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: bolder ;
+
+  }
+  form textarea {
+    resize: vertical;
+    height: 100px;
+    resize: none;
+    font-weight: bolder ;
+
+  }
+  form .error {
+    color: #dc3545;
+    margin-top: 0.5rem;
+  }
+  #g {
+    background-color: #28a745;
+    color: #fff;
+    margin-top: 2rem;
+    height: 30px;
+    width: 50px;
+    padding: 4px;
+  }
+  #g:hover {
+    background-color: #218838;
+  }
+  #back{
+    background-color: #a76e28;
+    margin-top: 2rem;
+    margin-right: 10%;
+    height: 30px;
+    width: 50px;
+  }
+  #back:hover {
+    background-color: #b98d57;
+  }
+  #back a{
+    text-decoration: none;
+    color: #fff;
+   
+    padding: 4px;
+
+  }

@@ -1,0 +1,264 @@
+/* تصميم الصفحة العامة */
+
+/* إعدادات عامة */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("https://i.pinimg.com/736x/6e/eb/7b/6eeb7b84f2f1f4f07c14b790d25bedd6.jpg");
+  min-height: 100vh;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+   justify-content: flex-end; /* جعل الفورم في أقصى اليمين */
+   direction: rtl; /* لأن التصميم يدعم اللغة العربية */
+}
+
+/* الهيدر */
+.header {
+  /* background-color: #ff9900; */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: rtl;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+
+/* تنسيق زر تسجيل الدخول */
+.login-button {
+  padding: 12px 30px;
+  background-color: #1e635a; /* اللون الأخضر */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-button i {
+  margin-left: 10px;
+  margin-right: 5px;
+  font-size: 18px; /* تغيير حجم الأيقونة */
+  transition: transform 0.3s ease;
+}
+
+/* تأثير عند التحويم فوق الزر */
+.login-button:hover {
+  background-color: #205f4d; /* تغيير اللون عند التحويم */
+  transform: scale(1.05); /* تكبير الزر قليلاً */
+}
+
+/* تأثير على الأيقونة عند التحويم */
+.login-button:hover i {
+  transform: rotate(180deg); /* دوران الأيقونة */
+  
+}
+
+
+/* .login-button {
+  background-color: white;
+  color: #ff9900;
+  border: 2px solid white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 80px;
+  width:200px;
+  font-size: larger;
+} */
+
+/* .login-button:hover {
+  background-color: #fff0e0;
+  color: #ff9900;
+} */
+
+/* الحاوية الأساسية */
+
+
+/* النموذج */
+/* حاوية النموذج */
+.main-container {
+  display: flex;
+  justify-content: flex-start; /* ✅ هذا يخلي الفورم على اليسار */
+  align-items: flex-start;
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 80px;
+  margin-right: 50%;
+}
+
+
+/* الفورم */
+.form-container {
+  /* background-color: white; */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 380px;
+  text-align: right;
+  margin-right: 68%;
+}
+
+/* عنوان النموذج */
+.form-container h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* تنسيق الحقول */
+.form-container label {
+  font-size: 16px;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input,
+select,
+textarea {
+  width: 100%; /* يجعل جميع الحقول تأخذ العرض الكامل */
+  max-width: 400px; /* يمكنك ضبط العرض الأقصى حسب الحاجة */
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #333;
+  text-align: right;
+  box-sizing: border-box; /* يمنع تغيير الحجم بسبب الحواف */
+}
+
+/* تأثير عند التركيز على الحقول */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #090807;
+  outline: none;
+  box-shadow: 0 0 5px rgba(55, 54, 51, 0.5);
+}
+
+/* تخصيص الـ textarea */
+.form-container textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* زر الإرسال */
+.form-container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #1e635a; /* اللون الأخضر */
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #1e635a; /* اللون الأخضر */
+  
+}
+/* تنسيق نافذة الحوار */
+.dialog-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.dialog-box .dialog-content {
+  padding: 10px;
+}
+
+.dialog-box p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.dialog-box button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dialog-box button:hover {
+  background-color: #45a049;
+}
+
+/* الحقول المدخلة */
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #0d0d0c;
+  outline: none;
+}
+
+/* زر الإرسال */
+button[type="submit"] {
+  background-color: #1e635a; /* اللون الأخضر */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #1e635a; /* اللون الأخضر */
+  
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+/* الرسالة عند الخطأ */
+input[type="text"].error {
+  border-color: red;
+}
